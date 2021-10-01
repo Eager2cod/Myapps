@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>{%block head%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </style>
+    {%block css%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    </link rel="stylesheet" href="{{ url_for('static', filename='/static/images') }}">
+    </style>
+    {%endblock %} {%endblock %}
+</head>
+
+<body>{%block body%}
+    <header>
+        <div class="container">{%block container%}
+            <h1 class="logo">Amulet crafts</h1>
+            {% endblock %}
+            <nav>
+
+                <ul class="menu">{%block menu%}
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">contact</a></li>
+
+
+
+                </ul>
+            </nav>
+            {% endblock %}
+        </div>
+        {% endblock %}
+    </header>
+    <hr>
+   
+
+    {%block images%} {%endblock %}
+
+
+    <hr>
+    <div class='footer '> {%block footer %}
+        <h4>Share</h4>
+        {% endblock %}
+    </div>
+</body>
+
+</html>
